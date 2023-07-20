@@ -1,12 +1,12 @@
 import './App.css';
-//import { Login } from './components/Login/Login';
-import PlayeMode from './components/PlayerMode/PlayeMode';
-
+import Timer from './components/solo/Timer';
+// import { Login } from './components/Login/Login';
+// import Dropdown from './components/solo/Dropdown';
 
 function App() {
   return (
     <div className="App">
-      <PlayeMode/>
+      <Login/>
     </div>
   );
 }
