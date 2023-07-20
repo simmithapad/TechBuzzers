@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Login.css";
 export const Login = (props) => {
     const [username, setUsername] = useState('');
+    const navigate=useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -15,7 +17,7 @@ export const Login = (props) => {
             <form className="login-form" onSubmit={handleSubmit}>
                 {/* <label htmlFor="user">username</label> */}
                 <input value={username} onChange={(e) => setUsername(e.target.value)} type="user" placeholder="" id="user" name="user" />
-                <button type="submit">Start Playing</button>
+                <button type="submit" onClick={()=>navigate('/mode')}>Start Playing</button>
             </form>
         </div>
         </div>
