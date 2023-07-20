@@ -1,13 +1,26 @@
 import './App.css';
 import Practice from './components/practice/Practice';
-import Timer from './components/solo/Timer';
-// import { Login } from './components/Login/Login';
-// import Dropdown from './components/solo/Dropdown';
+import PlayeMode from './components/PlayerMode/PlayeMode';
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Link
+} from "react-router-dom";
+
+import { Login } from './components/Login/Login';
+
 
 function App() {
   return (
     <div className="App">
-  <Practice/>
+  <Router>
+      <Routes>
+          <Route path="/mode" element={<PlayeMode/>}/>
+          <Route path="/" element={<Login/>}/>
+          <Route path="/solo" element={<Practice/>}/>
+        </Routes>
+        </Router>
     </div>
   );
 }
