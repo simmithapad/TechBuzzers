@@ -1,15 +1,26 @@
 import './App.css';
-// import TimerFuckedUp from './components/solo/TimerFuckedUp';
-// import { Login } from './components/Login/Login';
-// import Dropdown from './components/solo/Dropdown';
-// import Timer from './components/solo/Timer';
-import WordGenerator from './components/solo/WordGenerator';
+import Practice from './components/practice/Practice';
+import PlayeMode from './components/PlayerMode/PlayeMode';
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Link
+} from "react-router-dom";
+
+import { Login } from './components/Login/Login';
+
 
 function App() {
   return (
     <div className="App">
-      {/* <Timer/> */}
-      <WordGenerator />
+  <Router>
+      <Routes>
+          <Route path="/mode" element={<PlayeMode/>}/>
+          <Route path="/" element={<Login/>}/>
+          <Route path="/solo" element={<Practice/>}/>
+        </Routes>
+        </Router>
     </div>
   );
 }

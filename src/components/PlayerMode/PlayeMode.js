@@ -3,14 +3,14 @@ import "./PlayerMode.css";
 export default function PlayeMode() {
   return (
     <div className="modepage">
-      <a href="#">
+      <a href="/solo">
         <span></span>
         <span></span>
         <span></span>
         <span></span>
         <h1>Play Solo</h1>
     </a>
-    <a href="#">
+    <a href="/">
         <span></span>
         <span></span>
         <span></span>
