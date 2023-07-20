@@ -1,33 +1,36 @@
 import React, { useState } from "react";
-import Select from "react-dropdown-select";
+import "./Dropdown.css";
 
-function Dropdown () {
-  const [value, setValue] = useState("");
+function Dropdown() {
+  const [selectedOption, setSelectedOption] = useState("");
 
   const options = [
-    { label: "Easy", value: 1},
-    { label: "Medium", value: 2 },
-    { label: "Hard", value: 3},
+    { label: "Easy", value: "option1" },
+    { label: "Medium", value: "option2" },
+    { label: "Hard", value: "option3" },
   ];
 
-  return (
-    <div className="d-flex justify-content-centre mt-5">
-      <div className="w-50 p-3 border rounded">
-          <h4>Difficulty</h4>
-          <Select
-            name="select"
-            options={options}
-            labelField="label"
-            valueField="value"
-            onChange={value=> setValue(value)}
-          >
+  const handleSelectChange = (event) => {
+    setSelectedOption(event.target.value);
+  };
 
-            </Select>
-            
-            <p>{value}</p>
+  return (
+    <div className="container">
+      <div className="select-wrapper">
+        <select value={selectedOption} onChange={handleSelectChange}>
+          <option value="">-- Difficulty --</option>
+          {options.map((option) => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
+          ))}
+        </select>
       </div>
+      {selectedOption && (
+        <p className="selected-option">Selected Option: {selectedOption}</p>
+      )}
     </div>
-  )
+  );
 }
 
 export default Dropdown;
