@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
   display: flex;
   min-height: 100vh;
@@ -6,7 +6,7 @@
   justify-content: center;
   color: white;
   /* background-image: linear-gradient(79deg, #7439db, #C66FBC 48%, #F7944D); */
-  background: url(./components/assets/gaming-keyboard.jpg);
+  /* background: url(./components/assets/gaming-keyboard.jpg);
 }
 
 .auth-form-container, .login-form{
@@ -48,4 +48,7 @@ button {
   background: none;
   color: white;
   text-decoration: underline;
+}  */
+html,body{
+  overflow: hidden;
 }
