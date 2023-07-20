@@ -2,41 +2,32 @@ import React, { useState } from "react";
 import Select from "react-dropdown-select";
 
 function Dropdown () {
-  const difficulty = [
-    { label: "Easy", value: "ES" },
-    { label: "Medium", value: "MD" },
-    { label: "Hard", value: "HD" },
+  const [value, setValue] = useState("");
+
+  const options = [
+    { label: "Easy", value: 1},
+    { label: "Medium", value: 2 },
+    { label: "Hard", value: 3},
   ];
 
   return (
     <div className="d-flex justify-content-centre mt-5">
-      <div className="">
+      <div className="w-50 p-3 border rounded">
           <h4>Difficulty</h4>
-      </div>
+          <Select
+            name="select"
+            options={options}
+            labelField="label"
+            valueField="value"
+            onChange={value=> setValue(value)}
+          >
 
+            </Select>
+            
+            <p>{value}</p>
+      </div>
     </div>
   )
-
 }
-
-// const Dropdown = ({ Difficulty }) => {
-//   const [selectedOption, setSelectedOption] = useState("");
-
-//   const handleSelect = (option) => {
-//     setSelectedOption(option.value);
-//   };
-
-//   return (
-//     <div>
-//       <select value={selectedOption} onChange={handleSelect}>
-//         {Difficulty.map((option) => (
-//           <option key={option.value} value={option.value}>
-//             {option.label}
-//           </option>
-//         ))}
-//       </select>
-//     </div>
-//   );
-// };
 
 export default Dropdown;
