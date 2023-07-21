@@ -27,6 +27,7 @@ function Multi(){
     const [currCharIndex, setCurrCharIndex] = useState(-1);
     const [currChar, setCurrChar] = useState("");
     const [correct, setCorrect] = useState(0);
+    // var correct=useRef(0);
     const [incorrect, setIncorrect] = useState(0);
     const [status, setStatus] = useState("waiting");
     const [difficulty, setDifficulty] = useState("easy");
@@ -51,9 +52,9 @@ function Multi(){
                 clearInterval(interval);
                 setStatus('finished');
                 setCurrInput("");
+                console.log(correct);
                 const socket = io('http://localhost:4000');
                 setSocket(socket);
-                console.log(correct);
                 socket.emit('playing',{username:username,correct:correct,incorrect:incorrect,tataltime:totaltime,difficulty:difficulty})
                 
                 return TIMER_DURATION[difficulty];
@@ -94,7 +95,8 @@ function Multi(){
         const wordToCompare = words[currWordIndex]
         const doesItMatch = wordToCompare === currInput.trim()
         if (doesItMatch) {
-          setCorrect(correct + 1)
+          setCorrect(correct+1);
+          console.log(correct);
           
         } else {
           setIncorrect(incorrect + 1)
@@ -138,7 +140,7 @@ function Multi(){
             return () => {
               socket.close();
             };
-          }, [username]);
+          }, [username,correct]);
         
           const findPlayers = () => {
             // Send a message to the backend

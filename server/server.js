@@ -154,7 +154,6 @@ io.on("connection",(socket)=>{
        
     })
     socket.on("playing",(e)=>{
-        console.log("hello");
         if(e.difficulty==="easy")
         {console.log(e);
             let objToChange=playingEasyArray.find(obj=>obj.p1.p1name===e.username||obj.p2.p2name===e.username);
