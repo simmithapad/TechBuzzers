@@ -2,6 +2,7 @@ import './App.css';
 import Practice from './components/practice/Practice';
 import PlayeMode from './components/PlayerMode/PlayeMode';
 import Ranking from './components/PlayerMode/Ranking';
+import FlipCard from './components/multi/FlipCard';
 import {
   BrowserRouter as Router,
   Route,
@@ -23,7 +24,7 @@ function App() {
           <Route path="/mode" element={<PlayeMode/>}/>
           <Route path="/" element={<Login/>}/>
           <Route path="/solo" element={<Practice/>}/>
-          <Route path="/ranking" element={<Ranking/>}/>
+          <Route path="/Lobby" element={<FlipCard/>}/>
         </Routes>
         </Router>
     </div>
