@@ -145,9 +145,6 @@ function Multi(){
             socket.emit('find', {username:username,difficulty:difficulty});
             console.log(username);
           };
-          const seeResult=()=>{
-          
-          }
         
     return(
         <>
@@ -156,7 +153,6 @@ function Multi(){
 
             </input> */}
             <button onClick={findPlayers}>Join Game</button>
-            <button onClick={seeResult}>Results</button>
             <div className="section">
         <label className="label">Select Difficulty Level:</label>
         <div className="controldrop">
