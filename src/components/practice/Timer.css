@@ -1,6 +1,6 @@
 /* Add additional styling as needed */
 
-.Appsolo {
+.practice {
     padding: 20px; 
     width: 100vw;
     height: 100vh;
@@ -18,11 +18,11 @@
     color: rgb(170, 66, 255);
   }
   
-  .has-text-centered {
+  .centertext {
     text-align: center;
   }
   
-  .has-text-primary {
+  .primarytext {
     color: rgb(170, 66, 255);
   }
   
@@ -35,14 +35,14 @@
     margin-bottom: 20px;
 
   }
-  .label{
+  .level{
     position: absolute;
     right:12rem;
     top:3rem;
     color:white;
     font-size: 1.5rem;
   }
-  .select{
+  .options{
     position: absolute;
     right:2rem;
     top:3rem;
@@ -69,7 +69,7 @@
     transform: translate(-50%,0%);
   }
   
-  .card {
+  .space {
     background-color: #000;
     opacity: 0.7;
     padding: 20px;
@@ -92,11 +92,11 @@
 
   }
   
-  span.has-background-success {
+  span.bg-success {
     background-color: #c3e6cb;
   }
   
-  span.has-background-danger {
+  span.bg-danger {
     background-color: #f8d7da;
   }
   
@@ -110,7 +110,7 @@
     padding: 10px;
   }
   
-  .has-text-info {
+  .textinfo {
     color: rgb(170, 66, 255);
   }
   
