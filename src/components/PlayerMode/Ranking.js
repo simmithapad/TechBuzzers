@@ -7,13 +7,12 @@ const Ranking = () => {
     { id: 1, name: 'Player 1', score: 1000 },
       { id: 2, name: 'Player 2', score: 900 },
      { id: 3, name: 'Player 3', score: 800 },
-     { id: 4, name: 'Player 4', score: 700 },
-     { id: 5, name: 'Player 5', score: 600 },
+     { id: 4, name: 'Player 4', score: 700 }
    ];
 
   return (
     <div className="ranking-container">
-      <h1 className="ranking-title">Player Ranking</h1>
+      <h1 className="ranking-title">LEADERBOARD</h1>
       <ul className="ranking-list">
         {players.map((player, index) => (
           <li key={player.id} className="player-item">

@@ -4,8 +4,9 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Arial', sans-serif;
-  background-image: url("../assets/4127298.jpg"); 
-  background-size: cover;
+  background-image: url("../assets/gradient-hexagonal-background_23-2148954968.jpg");
+  background-blend-mode:soft-light; 
+  background-size:cover;
   background-repeat: no-repeat;
 }
 
@@ -13,14 +14,18 @@ body {
 .ranking-container {
   text-align: center;
   padding: 20px;
+  
 }
 
 /* Ranking title styles */
 .ranking-title {
   margin-bottom: 20px;
   font-size: 36px;
-  color: #fff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  background: -webkit-linear-gradient(#86acea9d, #8f65df);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /*text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);*/
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 /* Player ranking list styles */
@@ -31,41 +36,46 @@ body {
 
 .player-item {
   display: flex;
+  position:relative;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #ccc;
+  border: 5px ridge #4185da;
   padding: 10px;
   transition: background-color 0.2s ease;
-  background-color: #0e1c48;
   color: #fff;
   font-size: 20px;
+  width:70vw;
+  margin: 20px 20px 20px 190px; 
+  background-image: linear-gradient(to right, #197aaa, #0373ba, #3568c4, #6357c6, #8e3cbb);
 }
 
-.player-item:last-child {
+/*.player-item:last-child {
   border-bottom: none;
-}
+}*/
 
 .rank {
   width: 30px;
   font-weight: bold;
-  color: #f44336; /* Red */
+  color: white; /* Red */
 }
 
 .player-name {
   flex: 1;
-  color: #f44336; /* Red */
+  color: white; /* Red */
+  margin-left:50px ;
+  width:70vw;
 }
 
 .score {
   width: 100px;
-  font-weight: bold;
-  color: #28c52d; /* Green */
+  font-weight:550;
+  color: white; /* Green */
 }
 
 /* Highlight the top player */
 .player-item:first-child {
   font-weight: bold;
-  background-color: #e99725; /* Yellow */
+  background-color: #f69307; /* Yellow */
 }
 
 /* Add some hover effect */
