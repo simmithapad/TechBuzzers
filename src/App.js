@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 
 import { Login } from './components/Login/Login';
+import Multi from './components/multi/Multi';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path="/mode" element={<PlayeMode/>}/>
           <Route path="/" element={<Login/>}/>
           <Route path="/solo" element={<Practice/>}/>
+          <Route path="/multi" element={<Multi/>}/>
         </Routes>
         </Router>
     </div>
