@@ -10,7 +10,7 @@ export default function PlayeMode() {
         <span></span>
         <h1>Play Solo</h1>
     </a>
-    <a href="/">
+    <a href="/Lobby">
         <span></span>
         <span></span>
         <span></span>
