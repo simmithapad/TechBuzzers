@@ -17,10 +17,10 @@ function App() {
     <div className="App">
   <Router>
       <Routes>
-          <Route path="/mode" element={<PlayeMode/>}/>
+          <Route path="/mode/:username" element={<PlayeMode/>}/>
           <Route path="/" element={<Login/>}/>
           <Route path="/solo" element={<Practice/>}/>
-          <Route path="/multi" element={<Multi/>}/>
+          <Route path="/multi/:username" element={<Multi/>}/>
         </Routes>
         </Router>
     </div>

@@ -17,7 +17,7 @@ export const Login = (props) => {
             <form className="login-form" onSubmit={handleSubmit}>
                 {/* <label htmlFor="user">username</label> */}
                 <input value={username} onChange={(e) => setUsername(e.target.value)} type="user" placeholder="" id="user" name="user" />
-                <button type="submit" onClick={()=>navigate('/mode')}>Start Playing</button>
+                <button type="submit" onClick={()=>navigate(`/mode/${username}`)}>Start Playing</button>
             </form>
         </div>
         </div>
