@@ -139,10 +139,10 @@ function Practice() {
         <label className="label">Select Difficulty Level:</label>
         <div className="controldrop">
           <div className="select">
-            <select value={difficulty} onChange={handleDifficultyChange}>
-              <option value="easy">Easy</option>
-              <option value="medium">Medium</option>
-              <option value="hard">Hard</option>
+            <select className="dropdown" value={difficulty} onChange={handleDifficultyChange}>
+              <option className="item" value="easy">Easy</option>
+              <option className="item" value="medium">Medium</option>
+              <option className="item" value="hard">Hard</option>
             </select>
           </div>
         </div>
