@@ -8,25 +8,36 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background: url("../assets/mode_bg.png")/*#050801*/;
+    height: 50rem;
+    background: url("../assets/mode_bg.png");
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
 }
+@media(max-width:950px){
+    .modepage{
+        display: block;
+        justify-content: center;
+        align-items: center;
+        height:40rem;
+        background: url("../assets/mode_bg.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-left: 10px;
+    }    
+}
 a{
     position: relative;
     display: inline-block;
     padding: 25px 30px;
-    margin: 40px 0;
+    margin: 50px 20px 30px 40px;
     color: /*#03e9f4*/ rgba(245, 245, 245, 0.949);
     text-decoration: none;
     text-transform: uppercase;
     transition: 0.5s;
     letter-spacing: 4px;
     overflow: hidden;
-    margin-right: 50px;
    
 }
 a:hover{
