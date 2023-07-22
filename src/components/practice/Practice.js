@@ -122,12 +122,12 @@ function Practice() {
   function getCharClass(wordIdx, charIdx, char) {
     if (wordIdx === currWordIndex && charIdx === currCharIndex && currChar && status !== 'finished') {
       if (char === currChar) {
-        return 'has-background-success'
+        return 'bg-success'
       } else {
-        return 'has-background-danger'
+        return 'bg-danger'
       }
     } else if (wordIdx === currWordIndex && currCharIndex >= words[currWordIndex].length) {
-      return 'has-background-danger'
+      return 'bg-danger'
     } else {
       return ''
     }
@@ -148,7 +148,7 @@ function Practice() {
         </div>
       </div>
       <div className="section">
-        <div className="is-size-1 has-text-centered has-text-primary">
+        <div className="is-size-2 centertext primarytext">
           <h2>{countDown}</h2>
         </div>
       </div>
@@ -164,14 +164,14 @@ function Practice() {
         />
       </div>
       <div className="section">
-        <button className="button is-info is-fullwidth" onClick={start}>
+        <button className="btn" onClick={start}>
           Start
         </button>
       </div>
       {status === 'started' && (
         <div className="section">
-          <div className="card">
-            <div className="card-content">
+          <div className="space">
+            <div className="space-content">
               <div className="content">
                 {words.map((word, i) => (
                   <span key={i}>
@@ -193,18 +193,18 @@ function Practice() {
           <div className="columns">
             <div className="column has-text-centered">
               <p className="is-size-5">Words per minute:</p>
-              <p className="has-text-primary is-size-1">
+              <p className="textinformation is-size-2">
                 {(60*correct)/totaltime}
               </p>
             </div>
             <div className="column has-text-centered">
               <p className="is-size-5">Accuracy:</p>
               {correct !== 0 ? (
-                <p className="has-text-info is-size-1">
+                <p className="textinfo is-size-1">
                   {Math.round((correct / (correct + incorrect)) * 100)}%
                 </p>
               ) : (
-                <p className="has-text-info is-size-1">0%</p>
+                <p className="textinformation is-size-3">0%</p>
               )}
             </div>
           </div>
