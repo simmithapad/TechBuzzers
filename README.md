@@ -28,7 +28,7 @@ nodemon server.js (To run the backend)
 Enter the username that you want to play with
 <img src="https://asset.cloudinary.com/dsgbejjkc/f643f694afd6d9db05d7db37cdad51c8" width="250" height="250">
 Select a play mode
-
+<img src="https://asset.cloudinary.com/dsgbejjkc/45ab0ba9775195bf012a4a7f0f5c6366">
 Select a difficulty level (Easy-1 word at a time(15sec), Medium-10 words at a time(60sec), Hard-200 words at a time(75sec))
 
 Solo Mode
