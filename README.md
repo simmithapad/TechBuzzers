@@ -46,7 +46,7 @@ Socket.io-For backend and creating lobbies
 
 
 ### Future Scope
-Having a lobby of more than 2 players
-Allowing users to create their personal lobbies and invite their friends
-Allowing users to see live time progress of their competitors
-Showing daily basis world rankings
+->Having a lobby of more than 2 players  
+->Allowing users to create their personal lobbies and invite their friends  
+->Allowing users to see live time progress of their competitors  
+->Showing daily basis world rankings  
