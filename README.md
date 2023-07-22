@@ -12,8 +12,8 @@ A solo as well as multiplayer game that helps you analyze your typing skills
 
 
 ### `TechStack
-ReactJs-Frontend
-Socket.io-For backend and creating lobbies
+ReactJs-Frontend     
+Socket.io-For backend and creating lobbies  
 
 ### `To run locally
 
