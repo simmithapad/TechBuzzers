@@ -54,16 +54,9 @@ function Multi(){
                 clearInterval(interval);
                 setStatus('finished');
                 setCurrInput("");
-<<<<<<< HEAD
-                console.log(correct);
-                const socket = io('http://localhost:4000');
-                setSocket(socket);
-                socket.emit('playing',{username:username,correct:correct,incorrect:incorrect,tataltime:totaltime,difficulty:difficulty})
-=======
                 // const socket = io('http://localhost:4000');
                 // setSocket(socket);
                 // socket.emit('playing',{username:username,correct:correct,incorrect:incorrect,tataltime:totaltime,difficulty:difficulty})
->>>>>>> kirti
                 
                 return TIMER_DURATION[difficulty];
               } else {
@@ -160,11 +153,7 @@ function Multi(){
             return () => {
               socket.close();
             };
-<<<<<<< HEAD
-          }, [username,correct]);
-=======
           }, [username,status]);
->>>>>>> kirti
         
           const findPlayers = () => {
             // Send a message to the backend
