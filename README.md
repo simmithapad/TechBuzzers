@@ -1,3 +1,22 @@
+# Key Rush - Team Tech Buzzers
+
+Hi, we are Team **Tech Buzzers** and here we are with our web app called **Key Rush**, a speed typing game.  
+
+<img src="https://github.com/simmithapad/TechBuzzers/assets/96862654/bbb5925f-481b-43c8-a22f-4c13da91dcb5" alt="Logo" width="250" height="250">
+
+
+# About the game:
+
+-> 
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
