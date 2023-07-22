@@ -5,85 +5,41 @@ Hi, we are Team **Tech Buzzers** and here we are with our web app called **Key R
 <img src="https://github.com/simmithapad/TechBuzzers/assets/96862654/bbb5925f-481b-43c8-a22f-4c13da91dcb5" alt="Logo" width="250" height="250">
 
 
-# About the game:
-
--> 
 
 
+## About the game
+A solo as well as multiplayer game that helps you analyze your typing skills
+
+
+### `TechStack
+ReactJs-Frontend
+Socket.io-For backend and creating lobbies
+
+### `To run locally
+
+Clone the repo
+Install the dependencies by running npm install
+To start the frontend - npm start
+Open a new terminal
+cd server (switch to the server folder)
+nodemon server.js (To run the backend)
+
+### Screenshots of the game
+Enter the username that you want to play with
+<img src="https://asset.cloudinary.com/dsgbejjkc/f643f694afd6d9db05d7db37cdad51c8" width="250" height="250">
+Select a play mode
+
+Select a difficulty level (Easy-1 word at a time(15sec), Medium-10 words at a time(60sec), Hard-200 words at a time(75sec))
+
+Solo Mode
+Multi Mode
+Leader Board
 
 
 
 
-
-
-
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Future Scope
+Having a lobby of more than 2 players
+Allowing users to create their personal lobbies and invite their friends
+Allowing users to see live time progress of their competitors
+Showing daily basis world rankings
