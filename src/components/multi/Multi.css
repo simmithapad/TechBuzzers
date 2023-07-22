@@ -103,6 +103,55 @@ a span:nth-child(1){
     background: linear-gradient(90deg,transparent,#03e9f4);
     animation: animate1 1s linear infinite;
 }
+.joinbutton{
+    position: absolute;
+    top:5rem;
+    right:2rem;
+    width:10vw;
+    border:none;
+    background-color: rgb(255, 128, 0);
+    padding: 1rem;
+    border-radius: 10px;
+}
+.ranking-container{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    background-color:black;
+    height:50vh;
+    z-index:100;
+    width:28vw;
+}
+.rankinghead{
+    color:orange;
+    margin-left: 5rem;
+}
+.rankinglist{
+
+}
+.playeritem{
+background-color: orange;
+margin:4rem 0rem 4rem 0rem;
+padding: 1rem;
+width:20vw;
+border-radius:10px;
+}
+.rankno{
+    margin:1rem;
+    font-weight:bold;
+    font-size: 1.5rem;
+}
+.playername{
+margin: 1rem;
+font-weight: bold;
+font-size: 1.5rem;
+}
+.playerscore{
+    margin: 1rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
 @keyframes animate1{
     0%{
         left: -100%;
@@ -223,3 +272,5 @@ a span:nth-child(4){
   .has-text-info {
     color: rgb(28, 161, 21);
   }
+
+ 

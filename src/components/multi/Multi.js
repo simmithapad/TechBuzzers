@@ -3,6 +3,7 @@ import {io} from "socket.io-client";
 import { generate } from 'random-words';
 import "./Multi.css";
 import { useParams } from 'react-router-dom';
+
 function Multi(){
     const{username}=useParams();
     const NUMB_OF_WORDS = {
@@ -31,6 +32,7 @@ function Multi(){
     const [incorrect, setIncorrect] = useState(0);
     const [status, setStatus] = useState("waiting");
     const [difficulty, setDifficulty] = useState("easy");
+    const[players,setPlayers]=useState([]);
 
     const textInput = useRef(null);
     function start() {
@@ -52,10 +54,16 @@ function Multi(){
                 clearInterval(interval);
                 setStatus('finished');
                 setCurrInput("");
+<<<<<<< HEAD
                 console.log(correct);
                 const socket = io('http://localhost:4000');
                 setSocket(socket);
                 socket.emit('playing',{username:username,correct:correct,incorrect:incorrect,tataltime:totaltime,difficulty:difficulty})
+=======
+                // const socket = io('http://localhost:4000');
+                // setSocket(socket);
+                // socket.emit('playing',{username:username,correct:correct,incorrect:incorrect,tataltime:totaltime,difficulty:difficulty})
+>>>>>>> kirti
                 
                 return TIMER_DURATION[difficulty];
               } else {
@@ -112,13 +120,16 @@ function Multi(){
         return new Array(10).fill(null).map(() => generate());
       }
         useEffect(() => {
-            console.log(correct);
             const socket = io('http://localhost:4000');
             setSocket(socket);
         
             socket.on('connect', () => {
               console.log('WebSocket connected');
             });
+            if(status==='finished')
+            {console.log("finished");
+                socket.emit('playing',{username:username,correct:correct,incorrect:incorrect,difficulty:difficulty,totaltime:totaltime})
+            }
         
             socket.on("find",(e)=>{
             console.log(e.allPlayers);
@@ -130,8 +141,17 @@ function Multi(){
         })
             socket.on("playing",(e)=>{
                 const objPlayer=e.allPlayers.find(obj=>obj.p1.p1name===username || obj.p2.p2name===username);
-                console.log(objPlayer.p1.p1speed);
-                console.log(objPlayer.p2.p2speed);
+                if(objPlayer.p1.p1speed>objPlayer.p2.p2speed)
+                {
+                    setPlayers([{name:objPlayer.p1.p1name,score:objPlayer.p1.p1speed },{name:objPlayer.p2.p2name,score:objPlayer.p2.p2speed}])
+                    
+                    
+                }
+                else{
+                    setPlayers([{name:objPlayer.p2.p2name,score:objPlayer.p2.p2speed },{name:objPlayer.p1.p1name,score:objPlayer.p1.p1speed}])
+
+                }
+                
             })
             socket.on('disconnect', () => {
               console.log('WebSocket disconnected');
@@ -140,7 +160,11 @@ function Multi(){
             return () => {
               socket.close();
             };
+<<<<<<< HEAD
           }, [username,correct]);
+=======
+          }, [username,status]);
+>>>>>>> kirti
         
           const findPlayers = () => {
             // Send a message to the backend
@@ -154,7 +178,7 @@ function Multi(){
             {/* <input type="text" onChange={(e)=>setUsername(e.target.value)}>
 
             </input> */}
-            <button onClick={findPlayers}>Join Game</button>
+            <button onClick={findPlayers} className='joinbutton'>Join Game</button>
             <div className="section">
         <label className="label">Select Difficulty Level:</label>
         <div className="controldrop">
@@ -182,6 +206,20 @@ function Multi(){
           value={currInput}
           onChange={(e) => setCurrInput(e.target.value)}
         />
+              {status === 'finished' && (
+                <div className="ranking-container">
+      <h1 className="rankinghead">LEADERBOARD</h1>
+      <ul className="rankinglist">
+        {players.map((player, index) => (
+          <li key={player.id} className="playeritem">
+            <span className="rankno">{index + 1}</span>
+            <span className="playername">{player.name}</span>
+            <span className="playerscore">Score: {player.score}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+      )}
       </div>
             {/* <div>{opponent}</div> */}
             {/* <div>{opponent}</div> */}
